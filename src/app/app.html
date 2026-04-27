@@ -1,0 +1,17 @@
+<div class="main">
+  <h1>TROCA AQUI PORRA</h1>
+  <input class="lg-text-input" #campoNovoItem />
+  <button class="btn-primary" (click)="CREATE_tarefa(campoNovoItem.value)">
+    Adicionar Tarefa
+  </button>
+  <ul>
+    <!-- ✅ Tarefas() com parênteses para ler o Signal -->
+    <li *ngFor="let tarefaDoLoop of Tarefas()">
+      <app-item 
+        [tarefa]="tarefaDoLoop" 
+        (removeTarefa)="DELETE_tarefa(tarefaDoLoop)" 
+        (modificaTarefa)="UPDATE_tarefa(tarefaDoLoop)">
+      </app-item>
+    </li>
+  </ul>
+</div>
