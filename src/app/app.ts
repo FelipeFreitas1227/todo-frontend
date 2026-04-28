@@ -15,7 +15,7 @@ export class App implements OnInit {
   Tarefas = signal<Tarefa[]>([]);  // ✅ Apenas o Signal
 
   constructor(private http: HttpClient) {
-    this.apiURL = 'https://todo-backend-dgb1.onrender.com'; //aq trocar 
+    this.apiURL = 'https://felipe-freitas-253828.onrender.com'; //aq trocar 
   }
 
   ngOnInit() {
